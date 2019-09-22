@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CO2Sharp", "CO2Sharp\CO2Sharp.csproj", "{5EEBA996-8C69-44AA-A264-7D02C23119B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CO2Sharp.Test", "CO2Sharp.Test\CO2Sharp.Test.csproj", "{9052E5B5-2608-4C1D-8491-F803D24725CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{5EEBA996-8C69-44AA-A264-7D02C23119B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EEBA996-8C69-44AA-A264-7D02C23119B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EEBA996-8C69-44AA-A264-7D02C23119B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9052E5B5-2608-4C1D-8491-F803D24725CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9052E5B5-2608-4C1D-8491-F803D24725CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9052E5B5-2608-4C1D-8491-F803D24725CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9052E5B5-2608-4C1D-8491-F803D24725CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -9,7 +9,7 @@ namespace CO2Sharp
         static void Main(string[] args)
         {
             var co2SensorController = Co2SensorController.Create();
-            var start = co2SensorController.Start();
+            co2SensorController.Start();
             while (true)
             {
                 Thread.Sleep(15 * 1000);

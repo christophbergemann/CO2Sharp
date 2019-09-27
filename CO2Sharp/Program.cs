@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading;
-using CO2Sharp.CO2Sensor;
+using CO2SensorReader.CO2Sensor;
 
 namespace CO2Sharp
 {

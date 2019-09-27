@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageVersion>0.0.1</PackageVersion>
+        <Title>CO2 Sensor Reader</Title>
+        <Authors>Christoph Bergemann</Authors>
+        <Description>Reads data from a specific low cost CO2 sensor </Description>
+        <Copyright>Christoph Bergemann</Copyright>
+        <RepositoryUrl>https://github.com/christophbergemann/CO2Sharp</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/christophbergemann/CO2Sharp</PackageProjectUrl>
+        <PackageLicenseUrl>https://raw.githubusercontent.com/christophbergemann/CO2Sharp/master/LICENSE</PackageLicenseUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="HidSharp" Version="2.1.0" />
+    </ItemGroup>
+
+</Project>

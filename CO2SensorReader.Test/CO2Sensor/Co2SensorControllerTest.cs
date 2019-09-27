@@ -1,8 +1,8 @@
-using CO2Sharp.CO2Sensor;
+using CO2SensorReader.CO2Sensor;
 using FluentAssertions;
 using Xunit;
 
-namespace CO2Sharp.Test.CO2Sensor
+namespace CO2SensorReader.Test.CO2Sensor
 {
     public class Co2SensorControllerTest
     {

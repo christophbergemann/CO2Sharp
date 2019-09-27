@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using HidSharp;
 
-namespace CO2Sharp.CO2Sensor
+namespace CO2SensorReader.CO2Sensor
 {
     public class Co2SensorController : IDisposable
     {

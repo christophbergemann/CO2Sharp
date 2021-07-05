@@ -11,6 +11,7 @@ namespace CO2SensorReader.CO2Sensor
         private static readonly byte[] Key = {0xc4, 0xc6, 0xc0, 0x92, 0x40, 0x23, 0xdc, 0x96};
         private volatile float _temperature = -999;
         private volatile float _co2Value = -999;
+        private volatile bool _shouldRun = true;
 
         public float Temperature => _temperature;
         public float Co2 => _co2Value;
@@ -35,9 +36,18 @@ namespace CO2SensorReader.CO2Sensor
         {
             var task = new Task(() =>
             {
-                while (true)
+                while (_shouldRun)
                 {
-                    var data = _stream.Read();
+                    byte[] data;
+                    try
+                    {
+                        data = _stream.Read();
+                    }
+                    catch (Exception)
+                    {
+                        return;
+                    }
+
                     var dataAsInt = data.Skip(1).Select(i => (int) i).ToArray();
                     var decrypted = DecryptDeviceData(dataAsInt);
                     if (!IsDataValid(decrypted))
@@ -60,6 +70,11 @@ namespace CO2SensorReader.CO2Sensor
             });
             task.Start();
             return task;
+        }
+
+        public void Stop()
+        {
+            _shouldRun = false;
         }
 
         private static HidDevice GetCo2Sensor()
@@ -115,6 +130,7 @@ namespace CO2SensorReader.CO2Sensor
 
         public void Dispose()
         {
+            Stop();
             _stream?.Dispose();
         }
     }
